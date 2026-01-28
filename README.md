@@ -1,8 +1,9 @@
 # tapocamera_autodaynightswitch
 The tapo cameras dont automatically switch to day and night mode due to street light and other external conditions, so this python script can be edited as per your location(edit longitude latitude and time zone in the script) so that day and night mode can be switched on based on sunrise and sunset times locally.  
-You can schedule the python script from cron(for mac) of scheduler for windows in an always running system(or raspberry pi) for 4.30AM and  4.30PM for dawn script and dusk script, and it will wait for the time between 4.30 and the sunrise/sunset time (+-15 mins) to run the script to switch day/night mode on.    
-**Dependencies:**    
-Python 3.13 ONLY  
+You can schedule the python script from cron(for mac) of scheduler for windows in an always running system(or raspberry pi) for 4.30AM and  4.30PM for dawn script and dusk script, and it will wait for the time between 4.30 and the sunrise/sunset time (+-15 mins) to run the script to switch day/night mode on.   
+  
+**Dependencies:**  
+**Python 3.13**  
 install Tapo using: pip3 install tapo   (or pip install tapo)  
 Sun: pip3 install sun  
 pip3 install datetime  
