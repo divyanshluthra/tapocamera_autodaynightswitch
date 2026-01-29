@@ -6,12 +6,12 @@ import pytz
 import time
 
 
-password_cloud = "password" # tapo cloud password 
+password_cloud = "password" # cloud password 
 host = "192.168.0.160" # ip of the camera, example: 192.168.1.52
 
 
 
-# 1. Define location (your location)
+# 1. Define location (Gurgaon)
 latitude = 28.4595
 longitude = 77.0266
 sun = Sun(latitude, longitude)
@@ -29,7 +29,7 @@ target_time = sunrise_time - timedelta(minutes=15)
 print(f"Sunrise in Gurgaon: {sunrise_time.strftime('%H:%M:%S')}")
 print(f"Target Time (Sunrise - 15 min): {target_time.strftime('%H:%M:%S')}")
 now = datetime.now(local_tz)
-time_difference = target_time - now
+time_difference = target_time - now.replace(tzinfo=None)
 # Get the total number of seconds as a floating-point number
 sleep_seconds = time_difference.total_seconds()
 
