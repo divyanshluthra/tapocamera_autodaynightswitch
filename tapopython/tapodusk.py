@@ -6,7 +6,7 @@ import pytz
 import time
 
 
-password_cloud = "password" # Tapo cloud password 
+password_cloud = "lci33333" # cloud password 
 host = "192.168.0.160" # ip of the camera, example: 192.168.1.52
 
 
@@ -29,7 +29,7 @@ target_time = local_sunset  + timedelta(minutes=15)
 print(f"Sunset in Gurgaon: {local_sunset.strftime('%H:%M:%S')}")
 print(f"Target Time (+15 min): {target_time.strftime('%H:%M:%S')}")
 now = datetime.now(local_tz)
-time_difference = target_time - now
+time_difference = target_time.replace(tzinfo=None) - now.replace(tzinfo=None)
 # Get the total number of seconds as a floating-point number
 sleep_seconds = time_difference.total_seconds()
 
