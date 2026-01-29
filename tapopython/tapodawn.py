@@ -6,7 +6,7 @@ import pytz
 import time
 
 
-password_cloud = "password" # cloud password 
+password_cloud = "password" # Enter Tapo cloud password 
 host = "192.168.0.160" # ip of the camera, example: 192.168.1.52
 
 
